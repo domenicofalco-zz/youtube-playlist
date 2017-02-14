@@ -25,7 +25,7 @@ var MongoClient = require('mongodb').MongoClient;
   DB CONNECTION
 */
 var db;
-MongoClient.connect('mongodb://domenico:domenico@ds151909.mlab.com:51909/youtubeplaylist', (err, database) => {
+MongoClient.connect('mongodb:your db', (err, database) => {
   if (err) return console.log(err)
   db = database
 })
