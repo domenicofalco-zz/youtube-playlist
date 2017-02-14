@@ -1,44 +1,88 @@
+/*
+  to start mongoDB connection: brew services start mongodb
+  to stop mongoDB connection: brew services stop mongodb
+
+  guida:
+  https://zellwk.com/blog/crud-express-mongodb/
+
+  MongoDB command:
+  after "brew services start", you can run (in a different panel), those CLI commands:
+
+  TO DELETE A DB: $ mongo <name_db> --eval "db.dropDatabase()"
+*/
+
 var express = require('express')
 var app = express()
-
+var bodyParser = require('body-parser')
 var fs = require('fs')
 var _ = require('lodash')
 var engines = require('consolidate')
 
+var MongoClient = require('mongodb').MongoClient;
 
-// data
-var users = []
-fs.readFile('videos.json', {encoding: 'utf8'}, function (err, data) {
-  if (err) throw err
 
-  JSON.parse(data).forEach(function (user) {
-    user.name.full = _.startCase(user.name.first + ' ' + user.name.last)
-    users.push(user)
-  })
-
+/*
+  DB CONNECTION
+*/
+var db;
+MongoClient.connect('mongodb://domenico:domenico@ds151909.mlab.com:51909/youtubeplaylist', (err, database) => {
+  if (err) return console.log(err)
+  db = database
 })
 
-// specify where the markup templates are
+/*
+  HTML TEMPLATE TO CONSIDER
+*/
 app.set('views', './templates')
 
-// add hbs extension for the templates
+
+/*
+  SPECIFY THE TEMPLATE EXTENSION THAT EXPRESS HAS TO HANDLE
+*/
 app.engine('hbs', engines.handlebars)
 app.set('view engine', 'hbs')
 
-// "render" method pass the markup in the root "/"
+/*
+  SAVE METHODS
+*/
+// "render" method passes data in the root "/" as markup
 app.get('/', function (req, res) {
-  res.render('index', {users: users}) // use index.hbs in the root "/"
+  db.collection('playlist').find().toArray(function(err, results) {
+    // "index" is hbs template and it gets "playlist" collection from DB
+    res.render('index', {playlist: results})
+  })
 })
 app.get('/test', function (req, res) {
-  res.render('exampleTemplate') // use exampleTemplate.hbs in the root "/test"
+  // use exampleTemplate.hbs in the root "/test"
+  res.render('exampleTemplate')
 })
 
+/*
+  SAVE METHODS
+*/
+app.use(bodyParser.urlencoded({extended: true}))
+app.post('/playlist', (req, res) => {
+  db.collection('playlist').save(req.body, (err, result) => {
+    if (err) return console.log(err)
+    res.redirect('/')
+  })
+})
+
+/*
+  CREATE API
+*/
 // "send" method creates an API available in "/api"
 app.get('/api', function (req, res) {
-  res.send({id: "users"})
+
+  db.collection('playlist').find().toArray(function(err, results) {
+    // "index" is hbs template and it gets "playlist" collection from DB
+    res.send({playlist: results})
+  })
 })
 
-
-var server = app.listen(8888, function () {
-  console.log('Example app listening on port 8888!')
+/*
+  OPEN SERVER CONNECTION
+*/
+app.listen(8888, () => {
+  console.log('listening on 8888')
 })

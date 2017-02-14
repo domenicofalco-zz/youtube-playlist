@@ -8,10 +8,17 @@
 
   <h1>index</h1>
   <ul>
-    {{#each users as |user|}}
-    <li><a href="/{{user.username}}">{{user.name.full}}</a></li>
+    {{#each playlist as |item|}}
+    <li>{{item.title}} {{item.url}} {{item.image}}</li>
     {{/each}}
   </ul>
+
+  <form action="/playlist" method="POST">
+    <input type="text" placeholder="video title" name="title" value="" />
+    <input type="text" placeholder="video url" name="url" value="" />
+    <input type="text" placeholder="video image" name="image" value="" />
+    <button type="submit">Submit</button>
+  </form>
 
 </body>
 </html>

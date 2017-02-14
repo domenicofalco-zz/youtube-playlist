@@ -1,22 +1,12 @@
 [
   {
-    "gender": "female",
-    "name": {
-      "title": "miss",
-      "first": "mary",
-      "last": "jones"
-    },
-    "email": "mary.jones56@example.com",
-    "username": "crazypeacock512"
+    "title": "title 1",
+    "image": "img//",
+    "url": "url//"
   },
   {
-    "gender": "male",
-    "name": {
-      "title": "mr",
-      "first": "alan",
-      "last": "walters"
-    },
-    "email": "alan.walters29@example.com",
-    "username": "crazytiger134"
+    "title": "title 2",
+    "image": "img2//",
+    "url": "url2//"
   }
 ]
