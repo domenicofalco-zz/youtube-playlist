@@ -1,16 +1,3 @@
-/*
-  to start mongoDB connection: brew services start mongodb
-  to stop mongoDB connection: brew services stop mongodb
-
-  guida:
-  https://zellwk.com/blog/crud-express-mongodb/
-
-  MongoDB command:
-  after "brew services start", you can run (in a different panel), those CLI commands:
-
-  TO DELETE A DB: $ mongo <name_db> --eval "db.dropDatabase()"
-*/
-
 var express = require('express')
 var app = express()
 var bodyParser = require('body-parser')

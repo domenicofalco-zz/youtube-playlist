@@ -4,10 +4,12 @@ DB Access<br>
 3) brew services start mongodb * <br>
 4) From now on, you have fully access to your local db through your terminal<br>
 
-* to stop mongoDB connection: brew services stop mongodb
-
-<br>
 To start the middleware<br>
 1) yarn install<br>
 2) yarn server-watch<br>
 3) navigate to http://localhost:8888/
+
+<br>
+* to stop mongoDB connection: brew services stop mongodb
+
+# some helps with mongo DB: https://zellwk.com/blog/crud-express-mongodb/
