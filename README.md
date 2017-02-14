@@ -12,4 +12,6 @@ To start the middleware<br>
 <br>
 * to stop mongoDB connection: brew services stop mongodb
 
-# some helps with mongo DB: https://zellwk.com/blog/crud-express-mongodb/
+<!---
+  some helps with mongo DB: https://zellwk.com/blog/crud-express-mongodb/
+-->
