@@ -7,8 +7,8 @@ api.get('/api', function (req, res) {
 
   db.collection('playlist').find().toArray(function(err, results) {
     // "index" is hbs template and it gets "playlist" collection from DB
-    res.send({playlist: results})
-  })
-})
+    res.send({playlist: results});
+  });
+});
 
 module.exports = api;

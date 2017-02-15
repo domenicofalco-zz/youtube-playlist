@@ -9,7 +9,12 @@
   <h1>index</h1>
   <ul>
     {{#each playlist as |item|}}
-    <li>{{item.title}} {{item.url}} {{item.image}}</li>
+    <li>
+      <form action="/playlist/remove/{{item._id}}" method="POST">
+        <label>{{item.title}} {{item.url}} {{item.image}}</labe>
+        <button>remove</button>
+      </form>
+    </li>
     {{/each}}
   </ul>
 
