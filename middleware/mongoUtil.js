@@ -4,7 +4,7 @@ let db;
 module.exports = {
 
   connectToServer: function(callback) {
-    MongoClient.connect('mongodb://localhost/youtubeplaylist', (err, database) => {
+    MongoClient.connect('mongodb://domenico:domenico@ds151909.mlab.com:51909/youtubeplaylist', (err, database) => {
       db = database;
       return callback(err);
     });
