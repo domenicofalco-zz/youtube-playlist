@@ -29,8 +29,8 @@ app.engine('hbs', exphbs({
 app.set('views', viewPath);
 app.set('view engine', 'hbs')
 
-// inject routes & APIs in the app
-app.use('/', routes);
+// inject APIs & routes in the app
 app.use('/', api);
+app.use('/', routes);
 
 module.exports = app;

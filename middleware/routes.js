@@ -4,10 +4,11 @@ const bodyParser = require('body-parser')
 
 routes.use(bodyParser.urlencoded({extended: true}));
 
-// set routes '/', load DB and pass it in the template index.hbs
-routes.get('/', (req, res) => {
+// sync with react router
+routes.get('*', (req, res) => {
   VideoData.find({}, (err, results) => {
-    res.render('pages/index', {playlist: results, pageTitle: 'Homepage'});
+    //res.sendFile(path.resolve(__dirname, '../public', 'index.html'))
+    res.render('pages/index', {playlist: results});
   })
 });
 
@@ -25,19 +26,20 @@ routes.post('/insert', (req, res) => {
   res.redirect('/');
 });
 
-// delete data from DB (needs to be enabled in the .hbs)
 routes.post('/delete/:id', (req, res) => {
   const id = req.params.id;
   VideoData.findByIdAndRemove(id).exec();
   res.redirect('/');
 });
 
-// select data from the DB that needs to be edited
+/*
+// TODO PROBABILEMTE NON SERIVE PIU L'EDIT, MA SOLO L'update
+//select data from the DB that needs to be edited
 routes.post('/edit/:id', (req, res) => {
-  const id = req.params.id;
-  VideoData.findById(id, (err, video) => {
-    res.render('pages/edit', {video: video, pageTitle: 'Edit'});
-  });
+const id = req.params.id;
+VideoData.findById(id, (err, video) => {
+res.render('pages/index', {video: video, pageTitle: 'Edit'});
+});
 });
 
 // finalize edit data from DB
@@ -52,6 +54,6 @@ routes.post('/update/:id', (req, res) => {
 
   VideoData.findByIdAndUpdate(id, video, {new: true}).exec();
   res.redirect('/');
-});
+});*/
 
 module.exports = routes;

@@ -1,10 +1,11 @@
 <div id="app"></div>
 
-<h1>This is handlebars</h1>
+
+<h1>index</h1>
 <ul>
   {{#each playlist as |item|}}
   <li>
-    <form action="/edit/{{item._id}}" method="post">
+    <form action="/delete/{{item._id}}" method="post">
       <label>{{item.title}} {{item.url}} {{item.image}}</labe>
       <button>edit</button>
     </form>
