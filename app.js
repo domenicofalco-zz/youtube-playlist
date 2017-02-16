@@ -17,11 +17,4 @@ app.set('view engine', 'hbs')
 app.use('/', routes);
 app.use('/', api);
 
-/*
-  TODO
-app.use('/', saveItem);
-app.use('/', removeItem);
-app.use('/', editRoot);
-*/
-
 module.exports = app;

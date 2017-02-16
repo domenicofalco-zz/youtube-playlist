@@ -30,4 +30,9 @@ routes.get('/test', (req, res) => {
   res.render('exampleTemplate');
 });
 
+/*
+  TODO :: routes removeItem
+  TODO :: routes editRoot
+*/
+
 module.exports = routes;
