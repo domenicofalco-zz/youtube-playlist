@@ -1,16 +1,32 @@
 const routes = require('express').Router();
-const mongoUtil = require('./mongoUtil');
-const db = mongoUtil.getDb();
+const VideoSchema = require('../database/schema/VideoSchema');
+const bodyParser = require('body-parser')
 
-routes.get('/', function (req, res) {
-  db.collection('playlist').find().toArray(function(err, results) {
-    // "render" method passes data in the root "/" as markup
-    // "index" is the .hbs template and it gets "playlist" collection from DB
+routes.use(bodyParser.urlencoded({extended: true}));
+
+// set routes "/", load DB and pass it in the template index.hbs
+routes.get('/', (req, res) => {
+  VideoSchema.find({}, (err, results) => {
     res.render('index', {playlist: results});
-  });
+  })
 });
-routes.get('/test', function (req, res) {
-  // use exampleTemplate.hbs in the root "/test"
+
+// save new data into DB
+routes.post('/insertVideo', (req, res) => {
+  const video = {
+    title: req.body.title,
+    url: req.body.url,
+    image: req.body.image
+  };
+
+  const data = new VideoSchema(video);
+
+  data.save();
+  res.redirect('/');
+});
+
+// set routes "/test"
+routes.get('/test', (req, res) => {
   res.render('exampleTemplate');
 });
 
