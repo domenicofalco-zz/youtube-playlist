@@ -10,14 +10,15 @@
   <ul>
     {{#each playlist as |item|}}
     <li>
-      <form action="/playlist/remove/{{item._id}}" method="POST">
+      <form action="/edit/{{item._id}}" method="post">
         <label>{{item.title}} {{item.url}} {{item.image}}</labe>
+        <button>edit</button>
       </form>
     </li>
     {{/each}}
   </ul>
 
-  <form action="/insertVideo" method="POST">
+  <form action="/insert" method="POST">
     <input type="text" placeholder="video title" name="title" value="" />
     <input type="text" placeholder="video url" name="url" value="" />
     <input type="text" placeholder="video image" name="image" value="" />

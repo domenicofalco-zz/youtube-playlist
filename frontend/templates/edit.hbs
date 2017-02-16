@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Index</title>
+</head>
+<body>
+
+  <h1>edit</h1>
+
+  <form action="/update/{{_id}}" method="post">
+    <input type="text" placeholder="title" name="title" value="{{title}}" />
+    <input type="text" placeholder="url" name="url" value="{{url}}" />
+    <input type="text" placeholder="image" name="image" value="{{image}}" />
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>

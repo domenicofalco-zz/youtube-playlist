@@ -7,6 +7,6 @@ const schema = mongoose.Schema({
 });
 
 // "playlists" is the collection name in the DB
-const VideoSchema = mongoose.model('playlists', schema);
+const VideoData = mongoose.model('playlists', schema);
 
-module.exports = VideoSchema;
+module.exports = VideoData;

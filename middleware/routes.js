@@ -1,38 +1,57 @@
 const routes = require('express').Router();
-const VideoSchema = require('../database/schema/VideoSchema');
+const VideoData = require('../database/schema/VideoSchema');
 const bodyParser = require('body-parser')
 
 routes.use(bodyParser.urlencoded({extended: true}));
 
 // set routes "/", load DB and pass it in the template index.hbs
 routes.get('/', (req, res) => {
-  VideoSchema.find({}, (err, results) => {
+  VideoData.find({}, (err, results) => {
     res.render('index', {playlist: results});
   })
 });
 
 // save new data into DB
-routes.post('/insertVideo', (req, res) => {
+routes.post('/insert', (req, res) => {
   const video = {
     title: req.body.title,
     url: req.body.url,
     image: req.body.image
   };
 
-  const data = new VideoSchema(video);
+  const data = new VideoData(video);
 
   data.save();
   res.redirect('/');
 });
 
-// set routes "/test"
-routes.get('/test', (req, res) => {
-  res.render('exampleTemplate');
+// delete data from DB (needs to be enabled in the .hbs)
+routes.post('/delete/:id', (req, res) => {
+  const id = req.params.id;
+  VideoData.findByIdAndRemove(id).exec();
+  res.redirect('/');
 });
 
-/*
-  TODO :: routes removeItem
-  TODO :: routes editRoot
-*/
+// select data from the DB that needs to be edited
+routes.post('/edit/:id', (req, res) => {
+  const id = req.params.id;
+  VideoData.findById(id, (err, video) => {
+    res.render('edit', video);
+  });
+});
+
+// finalize edit data from DB
+routes.post('/update/:id', (req, res) => {
+  const id = req.params.id;
+
+  const video = {
+    title: req.body.title,
+    url: req.body.url,
+    image: req.body.image
+  };
+
+  VideoData.findByIdAndUpdate(id, video, {new: true}).exec();
+  res.redirect('/');
+});
 
 module.exports = routes;
