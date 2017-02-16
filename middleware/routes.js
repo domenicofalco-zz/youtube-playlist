@@ -7,7 +7,7 @@ routes.use(bodyParser.urlencoded({extended: true}));
 // set routes "/", load DB and pass it in the template index.hbs
 routes.get('/', (req, res) => {
   VideoData.find({}, (err, results) => {
-    res.render('index', {playlist: results});
+    res.render('pages/index', {playlist: results});
   })
 });
 
@@ -36,7 +36,7 @@ routes.post('/delete/:id', (req, res) => {
 routes.post('/edit/:id', (req, res) => {
   const id = req.params.id;
   VideoData.findById(id, (err, video) => {
-    res.render('edit', video);
+    res.render('pages/edit', video);
   });
 });
 

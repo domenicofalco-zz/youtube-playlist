@@ -23,6 +23,7 @@
     "consolidate": "^0.13.1",
     "expose-loader": "^0.7.1",
     "express": "^4.14.1",
+    "express-handlebars": "^3.0.0",
     "handlebars": "^3.0.3",
     "lodash": "^3.10.0",
     "mongoose": "~4.4.19",
