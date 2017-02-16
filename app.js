@@ -1,11 +1,15 @@
+// dependencies
+const path = require('path');
 const express = require('express');
 const app = express();
 const exphbs  = require('express-handlebars');
-const templateEngine = require('consolidate');
+
+// backend communications
 const routes = require('./middleware/routes');
 const api = require('./middleware/api');
 const db = require('./database/db-connection');
-const path = require('path');
+
+// set directories
 const publicPath = path.join(__dirname, 'public');
 const viewPath = path.join(__dirname, 'frontend/templates')
 
