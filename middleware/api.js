@@ -1,5 +1,7 @@
-const api = require('express').Router();
-const VideoData = require('../database/schema/VideoSchema');
+import express from 'express';
+import VideoData from '../database/schema/VideoSchema';
+
+const api = express.Router();
 
 // "send" method creates an API available in "/api" root. Example:
 api.get('/api', (req, res) => {

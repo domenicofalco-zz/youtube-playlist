@@ -1,6 +1,7 @@
 // creates a httpServer and passes app as the handler
-const app = require('../app');
-const http = require('http');
+import app from '../app';
+import http from 'http';
+
 const server = http.createServer(app);
 const port = 8888;
 
@@ -9,4 +10,4 @@ server.on('error', onError);
 
 function onError(err) {
   console.log('Server connection problem:', err);
-}
+};

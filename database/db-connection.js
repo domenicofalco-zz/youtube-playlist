@@ -1,5 +1,5 @@
 // db connection
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 const uri = 'mongodb://localhost/youtubeplaylist';
 
 mongoose.connect(uri);

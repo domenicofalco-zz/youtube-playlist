@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 class Test extends React.Component {
   render() {
@@ -7,7 +7,7 @@ class Test extends React.Component {
     return (
       <h1>test page</h1>
     );
-  }
-}
+  };
+};
 
 export default Test;

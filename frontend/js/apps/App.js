@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 class App extends React.Component {
   render() {
@@ -8,7 +8,7 @@ class App extends React.Component {
         <a href="/test">test</a>
       </div>
     );
-  }
-}
+  };
+};
 
 export default App;

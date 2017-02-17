@@ -17,7 +17,7 @@ const config = {
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
-        include: path.resolve(__dirname, './frontend'),
+        //include: path.resolve(__dirname, './frontend'),
         use: [{
           loader: 'babel-loader',
           options: {
@@ -30,6 +30,6 @@ const config = {
       }
     ]
   }
-}
+};
 
 module.exports = config
