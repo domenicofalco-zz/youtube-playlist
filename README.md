@@ -8,7 +8,7 @@ DB Access<br>
 
 Middleware & Frontend<br>
 1) yarn middleware-watch<br>
-1) yarn frontend-watch
+1) yarn frontend-watch<br>
 2) navigate to http://localhost:8888/
 
 <br>
