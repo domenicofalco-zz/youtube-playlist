@@ -13,8 +13,7 @@ Middleware & Frontend<br>
 2) yarn frontend-watch<br>
 3) navigate to http://localhost:8888/
 
-<br>
-* to stop mongoDB connection: brew services stop mongodb
+<br>* to stop mongoDB connection: brew services stop mongodb
 <br>
 ** shell reference for mongodb https://docs.mongodb.com/manual/reference/mongo-shell/
 
