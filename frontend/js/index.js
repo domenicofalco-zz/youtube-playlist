@@ -2,23 +2,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { Router, Route, browserHistory } from 'react-router';
-import { syncHistoryWithStore } from 'react-router-redux';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 // pages
-import App from './apps/App';
+import Layout from './apps/Layout';
+import Home from './apps/Home';
 import Test from './apps/Test';
-import store from './store';
 
-const history = syncHistoryWithStore(browserHistory, store);
+// store
+import store, { history } from './store';
 
-class Main extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
         <Router history={history}>
-          <Route path="/" component={App} />
-          <Route path="/test" component={Test} />
+          <Route path="/" component={Layout}>
+
+            <IndexRoute component={Home} />
+            <Route path="test" component={Test} />
+
+          </Route>
         </Router>
       </Provider>
     );
@@ -26,4 +30,4 @@ class Main extends React.Component {
 };
 
 
-ReactDOM.render(<Main />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));

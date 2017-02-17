@@ -1,12 +1,10 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
+import videos from './videos';
 
-let initialState = {
-  test: false
-};
+const rootReducer = combineReducers({
+  videos,
+  routing: routerReducer
+});
 
-function employees(state = initialState, action) {
-  return state
-};
-
-export default combineReducers({ employees, routing: routerReducer });
+export default rootReducer;

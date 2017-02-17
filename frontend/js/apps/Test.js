@@ -5,7 +5,7 @@ class Test extends React.Component {
     //document.title = 'Test';
 
     return (
-      <h1>test page</h1>
+      <h1>test</h1>
     );
   };
 };

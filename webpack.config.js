@@ -24,12 +24,14 @@ const config = {
             presets: [
               ['es2015', { modules: false }],
               ['react']
-            ]
+            ],
+            plugins: ['transform-decorators-legacy']
           }
         }]
       }
     ]
-  }
+  },
+
 };
 
 module.exports = config
