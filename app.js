@@ -7,22 +7,18 @@ import routes from './middleware/routes';
 import api from './middleware/api';
 import db from './database/db-connection';
 
-// set directories
-const publicPath = path.join(__dirname, 'public');
-const viewPath = path.join(__dirname, 'frontend/templates');
+// import configuration from webpack
+import config from './webpack.config';
 
-//
+// define main application
 const app = express();
 
 // verify db connection
 db.on('error', (err) => { console.log('*** Db error:', err) });
 db.once('open', () => { console.log('*** Db connected *** ') });
 
-// define relative path to link JS / CSS in hbs template
-app.use(express.static(publicPath));
-
-// specify templates folder
-app.set('views', viewPath);
+// define /public path for: index.html, JS & CSS folders
+app.use(express.static(config.output.publicPath));
 
 // inject APIs & routes in the app
 app.use('/', api);

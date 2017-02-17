@@ -10,14 +10,14 @@ const config = {
   },
   output: {
     path: path.resolve(__dirname, './public/js'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: 'public/'
   },
   module: {
     rules: [
       {
         test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
-        //include: path.resolve(__dirname, './frontend'),
+        include: path.resolve(__dirname, './frontend'),
         use: [{
           loader: 'babel-loader',
           options: {

@@ -3,16 +3,21 @@ import routes from 'express';
 import VideoData from '../database/schema/VideoSchema';
 import bodyParser from 'body-parser';
 
+// import configuration from webpack
+import config from '../webpack.config';
+
+// define router from express
 const router = routes.Router();
 
+// get /public path
+const publicPath = path.resolve(__dirname, '..', config.output.publicPath);
+
+// enable express to get data from HTML
 router.use(bodyParser.urlencoded({extended: true}));
 
 // sync with react router
 router.get('*', (req, res) => {
-  VideoData.find({}, (err, results) => {
-    res.sendFile(path.resolve(__dirname, '../public', 'index.html'))
-    //res.render('pages/index', {playlist: results});
-  });
+  res.sendFile(publicPath + '/index.html');
 });
 
 // save new data into DB
