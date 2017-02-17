@@ -8,20 +8,28 @@ import { fetchPostsWithRedux } from '../action/actionCreators';
 
 @connect((store) => {
   return {
-    title: "test"
+    playlist: store.videos.playlist
   }
 })
 class Home extends React.Component {
   componentWillMount(){
-    console.log(this.props.dispatch(fetchPostsWithRedux()));
-    console.log(this.props.title)
+    // fetch data from API
+    this.props.dispatch(fetchPostsWithRedux());
   }
 
   render() {
+
+    let list = this.props.playlist.map((video, i) => (
+      <li key={i}>{video.title} {video.url} {video.image}</li>
+    ));
+
     return (
       <div>
-        <h1>home</h1>
-        <a href="/test"></a>
+        <h1>Data from DB</h1>
+        <ul>
+          {list}
+        </ul>
+        <a href="/test">test</a>
       </div>
     );
   };

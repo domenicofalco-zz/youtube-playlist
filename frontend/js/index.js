@@ -18,10 +18,8 @@ class App extends React.Component {
       <Provider store={store}>
         <Router history={history}>
           <Route path="/" component={Layout}>
-
             <IndexRoute component={Home} />
             <Route path="test" component={Test} />
-
           </Route>
         </Router>
       </Provider>

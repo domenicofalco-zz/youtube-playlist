@@ -1,4 +1,6 @@
-function videos(state = {}, action) {
+function videos(state = {
+  playlist: []
+}, action) {
 
   switch (action.type) {
 
@@ -7,7 +9,7 @@ function videos(state = {}, action) {
     }
 
     case 'FETCH_SUCCESS': {
-      let newState = Object.assign({}, state, action.playlist);
+      let newState = Object.assign({}, state, action);
       return newState;
     }
 
