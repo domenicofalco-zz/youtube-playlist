@@ -7,7 +7,7 @@
   "author": "Domenico Falco",
   "license": "MIT",
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "nodemon ./bin/www --exec babel-node --presets es2015",
     "middleware": "node ./bin/www",
     "middleware-watch": "nodemon ./bin/www --exec babel-node --presets es2015",
     "frontend": "webpack",
