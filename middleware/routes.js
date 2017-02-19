@@ -1,10 +1,8 @@
-import path from 'path';
-import routes from 'express';
-import VideoData from '../database/schema/VideoSchema';
-import bodyParser from 'body-parser';
-
-// import configuration from webpack
-import config from '../webpack.config';
+const path = require('path');
+const routes = require('express');
+const VideoData = require('../database/schema/VideoSchema');
+const bodyParser = require('body-parser');
+const config = require('../webpack.config');
 
 // define router from express
 const router = routes.Router();

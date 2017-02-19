@@ -1,14 +1,14 @@
 // dependencies
-import path from 'path';
-import express from 'express';
+const path = require('path');
+const express = require('express');
 
 // backend communications
-import routes from './middleware/routes';
-import api from './middleware/api';
-import db from './database/db-connection';
+const routes = require('./middleware/routes');
+const api = require('./middleware/api');
+const db = require('./database/db-connection');
 
-// import configuration from webpack
-import config from './webpack.config';
+// const configuration = require(webpac)k
+const config = require('./webpack.config');
 
 // define main application
 const app = express();

@@ -1,5 +1,5 @@
-import express from 'express';
-import VideoData from '../database/schema/VideoSchema';
+const express = require('express');
+const VideoData = require('../database/schema/VideoSchema');
 
 const api = express.Router();
 

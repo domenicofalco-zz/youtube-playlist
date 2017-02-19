@@ -7,8 +7,9 @@
   "author": "Domenico Falco",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon ./bin/www --exec babel-node --presets es2015",
-    "middleware-watch": "nodemon ./bin/www --exec babel-node --presets es2015",
+    "start": "node ./bin/www",
+    "middleware": "node ./bin/www",
+    "middleware-watch": "nodemon ./bin/www",
     "frontend": "webpack",
     "frontend-watch": "webpack --watch",
     "frontend-build": "webpack --p"
