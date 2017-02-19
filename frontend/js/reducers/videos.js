@@ -1,28 +1,16 @@
-function videos(state = {
-  playlist: []
-}, action) {
-
-  switch (action.type) {
-
-    case 'FETCH_REQUEST': {
-      return state;
+export default function() {
+  return [
+    {
+      id: '1',
+      name: 'mimmo'
+    },
+    {
+      id: '2',
+      name: 'ciao'
+    },
+    {
+      id: '3',
+      name: 'rita'
     }
-
-    case 'FETCH_SUCCESS': {
-      let newState = Object.assign({}, state, action);
-      return newState;
-    }
-
-    case 'FETCH_ERROR': {
-      return state;
-    }
-
-    default: {
-      return state
-    }
-
-  }
-
+  ]
 }
-
-export default videos;

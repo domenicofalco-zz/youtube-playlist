@@ -13925,7 +13925,8 @@ module.exports = g;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__action_actionCreators__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_redux__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__action_actionCreators__ = __webpack_require__(158);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _dec, _class;
@@ -13937,16 +13938,24 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 // see https://www.youtube.com/watch?v=Td-2D-_7Y2E
+// SEE ALSO https://www.youtube.com/watch?v=GsyfB4URaYQ
 
 
 
 
-// fetch user date via promise
 
 
-var Home = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(function (store) {
+var Home = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(
+//pass store-state as props
+function (state) {
   return {
-    playlist: store.videos.playlist
+    users: state.users
+  };
+},
+//pass actionCreators as props
+function (dispatch) {
+  return {
+    clickUser: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_redux__["a" /* bindActionCreators */])(__WEBPACK_IMPORTED_MODULE_3__action_actionCreators__["a" /* clickUser */], dispatch)
   };
 }), _dec(_class = function (_React$Component) {
   _inherits(Home, _React$Component);
@@ -13958,24 +13967,20 @@ var Home = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_redux
   }
 
   _createClass(Home, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {
-      // fetch data from API
-      this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__action_actionCreators__["a" /* fetchPostsWithRedux */])());
-    }
-  }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
 
-      var list = this.props.playlist.map(function (video, i) {
+      var list = this.props.users.map(function (user) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'li',
-          { key: i },
-          video.title,
-          ' ',
-          video.url,
-          ' ',
-          video.image
+          {
+            key: user.id,
+            onClick: function onClick() {
+              return _this2.props.clickUser(user);
+            }
+          },
+          user.name
         );
       });
 
@@ -13985,7 +13990,7 @@ var Home = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_redux
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'h1',
           null,
-          'Data from DB'
+          'Dumb reducers'
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'ul',
@@ -14994,84 +14999,14 @@ module.exports = function spread(callback) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = fetchPostsWithRedux;
-var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
-
-/*
-  CREATE ACTION
-*/
-
-/*export function addVideo(videoID, title, url, image) {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return clickUser; });
+var clickUser = function clickUser(user) {
+  console.log(user.name);
   return {
-    type: 'ADD_VIDEO',
-    videoID,
-    title,
-    url,
-    image
-  }
-}
-
-export function removeVideo(videoID, i) {
-  return {
-    type: 'REMOVE_VIDEO',
-    videoID,
-    i
-  }
-}
-
-export function editVideo(videoID, title, url, image) {
-  return {
-    type: 'EDIT_VIDEO',
-    videoID,
-    title,
-    url,
-    image
-  }
-}*/
-
-// fetch data
-function fetchPostsWithRedux() {
-  return function (dispatch) {
-    dispatch(fetchPostsRequest());
-    return fetchPosts().then(function (_ref) {
-      var _ref2 = _slicedToArray(_ref, 2),
-          response = _ref2[0],
-          json = _ref2[1];
-
-      if (response.status === 200) {
-        dispatch(fetchPostsSuccess(json));
-      } else {
-        dispatch(fetchPostsError());
-      }
-    });
+    type: 'CLICKED_ACTION',
+    pauyload: user
   };
-}
-
-function fetchPostsRequest() {
-  return {
-    type: "FETCH_REQUEST"
-  };
-}
-
-function fetchPosts() {
-  var URL = "http://localhost:8888/api";
-  return fetch(URL, { method: 'GET' }).then(function (response) {
-    return Promise.all([response, response.json()]);
-  });
-}
-
-function fetchPostsSuccess(payload) {
-  return {
-    type: "FETCH_SUCCESS",
-    playlist: payload.playlist
-  };
-}
-
-function fetchPostsError() {
-  return {
-    type: "FETCH_ERROR"
-  };
-}
+};
 
 /***/ }),
 /* 159 */
@@ -15087,7 +15022,7 @@ function fetchPostsError() {
 
 
 var rootReducer = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["d" /* combineReducers */])({
-  videos: __WEBPACK_IMPORTED_MODULE_2__videos__["a" /* default */],
+  users: __WEBPACK_IMPORTED_MODULE_2__videos__["a" /* default */],
   routing: __WEBPACK_IMPORTED_MODULE_1_react_router_redux__["routerReducer"]
 });
 
@@ -15098,40 +15033,18 @@ var rootReducer = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["d" 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-function videos() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
-    playlist: []
-  };
-  var action = arguments[1];
-
-
-  switch (action.type) {
-
-    case 'FETCH_REQUEST':
-      {
-        return state;
-      }
-
-    case 'FETCH_SUCCESS':
-      {
-        var newState = Object.assign({}, state, action);
-        return newState;
-      }
-
-    case 'FETCH_ERROR':
-      {
-        return state;
-      }
-
-    default:
-      {
-        return state;
-      }
-
-  }
-}
-
-/* harmony default export */ __webpack_exports__["a"] = videos;
+/* harmony default export */ __webpack_exports__["a"] = function () {
+  return [{
+    id: '1',
+    name: 'mimmo'
+  }, {
+    id: '2',
+    name: 'ciao'
+  }, {
+    id: '3',
+    name: 'rita'
+  }];
+};
 
 /***/ }),
 /* 161 */
