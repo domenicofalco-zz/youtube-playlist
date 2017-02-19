@@ -8,7 +8,6 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon ./bin/www --exec babel-node --presets es2015",
-    "middleware": "node ./bin/www",
     "middleware-watch": "nodemon ./bin/www --exec babel-node --presets es2015",
     "frontend": "webpack",
     "frontend-watch": "webpack --watch",
