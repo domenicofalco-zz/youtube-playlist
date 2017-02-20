@@ -2,13 +2,13 @@ const path = require('path');
 const routes = require('express');
 const VideoData = require('../database/schema/VideoSchema');
 const bodyParser = require('body-parser');
-const config = require('../webpack.config');
+const config = require('../app-config');
 
 // define router from express
 const router = routes.Router();
 
 // get /public path
-const publicPath = path.resolve(__dirname, '..', config.output.publicPath);
+const publicPath = path.resolve(__dirname, '..', config.publicPath);
 
 // enable express to get data from HTML
 router.use(bodyParser.json());

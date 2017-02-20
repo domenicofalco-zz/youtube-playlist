@@ -1,11 +1,16 @@
 // creates a httpServer and passes app as the handler
 const app = require('../app');
+const config = require('../app-config');
 const http = require('http');
 
 const server = http.createServer(app);
-const port = 8888;
+const port = config.port;
 
-server.listen(port);
+server.listen(port, function(){
+  console.log('\n\n************************************\n');
+  console.log('Listening on: http://localhost:' + config.port + '/\n');
+  console.log('************************************\n\n');
+});
 server.on('error', onError);
 
 function onError(err) {

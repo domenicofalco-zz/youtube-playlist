@@ -1,7 +1,7 @@
 // db connection
 const mongoose = require('mongoose');
-const uri = 'mongodb://localhost/youtubeplaylist';
+const config = require('../app-config');
 
-mongoose.connect(uri);
+mongoose.connect(config.db);
 
 module.exports = mongoose.connection;
