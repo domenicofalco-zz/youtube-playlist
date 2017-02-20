@@ -21,7 +21,7 @@ db.once('open', () => { console.log('*** Db connected *** ') });
 app.use(express.static(config.output.publicPath));
 
 // inject APIs & routes in the app
-app.use('/', api);
+app.use('/api', api);
 app.use('/', routes);
 
 module.exports = app;

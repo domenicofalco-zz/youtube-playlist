@@ -11,6 +11,7 @@ const router = routes.Router();
 const publicPath = path.resolve(__dirname, '..', config.output.publicPath);
 
 // enable express to get data from HTML
+router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({extended: true}));
 
 // sync with react router
@@ -29,13 +30,13 @@ router.post('/insert', (req, res) => {
   const data = new VideoData(video);
 
   data.save();
-  res.redirect('/');
+  res.send(data).end();
 });
 
 router.post('/delete/:id', (req, res) => {
   const id = req.params.id;
   VideoData.findByIdAndRemove(id).exec();
-  res.redirect('/');
+  res.send(id).end();
 });
 
 /*

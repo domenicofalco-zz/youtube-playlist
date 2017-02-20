@@ -8,6 +8,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import Layout from './apps/Layout';
 import Home from './apps/Home';
 import Test from './apps/Test';
+import Notfound from './apps/Notfound';
 
 // store
 import store, { history } from './store';
@@ -20,6 +21,7 @@ class App extends React.Component {
           <Route path="/" component={Layout}>
             <IndexRoute component={Home} />
             <Route path="test" component={Test} />
+            <Route path="*" component={Notfound} status={404} />
           </Route>
         </Router>
       </Provider>
