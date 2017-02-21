@@ -39,19 +39,19 @@ router.post('/delete/:id', (req, res) => {
   res.send(id).end();
 });
 
-/*
 router.post('/update/:id', (req, res) => {
   const id = req.params.id;
 
   const video = {
-    title: req.body.title,
+    editable: req.body.editable,
     url: req.body.url,
     image: req.body.image
   };
 
-  VideoData.findByIdAndUpdate(id, video, {new: true});.exec();
-  res.redirect('/');
+  console.log(req.body.editable);
+
+  VideoData.findByIdAndUpdate(id, video, {new: true}).exec();
+  res.send(id).end();
 });
-*/
 
 module.exports = router;

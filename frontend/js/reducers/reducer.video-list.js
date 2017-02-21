@@ -43,6 +43,22 @@ export default function(state = [], action) {
       return error;
     }
 
+    case 'EDIT_VIDEO': {
+      return state;
+    }
+
+    case 'EDIT_VIDEO_SUCCESS': {
+      let newState = state.filter((video) => {
+        return video._id !== action.payload
+      })
+      return newState;
+    }
+
+    case 'EDIT_VIDEO_FAIL': {
+      let error = [].concat(state, action.payload);
+      return error;
+    }
+
     default:
       return state;
   }

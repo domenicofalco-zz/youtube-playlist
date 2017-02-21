@@ -12,7 +12,7 @@ export function fetchData() {
         dispatch({ type: 'FETCH_DATA_FAIL', payload: error })
       });
   }
-}
+};
 
 export function saveData(video) {
   return dispatch => {
@@ -36,6 +36,19 @@ export function removeData(videoId) {
       })
       .catch(function (error) {
         dispatch({ type: 'REMOVE_VIDEO_FAIL', payload: error })
+      });
+    }
+};
+
+export function editData(id, video) {
+  return dispatch => {
+    dispatch({ type: 'EDIT_VIDEO' });
+    axios.post(config.editURI + id, video)
+      .then(function (response) {
+        dispatch({ type: 'EDIT_VIDEO_SUCCESS', payload: response.data })
+      })
+      .catch(function (error) {
+        dispatch({ type: 'EDIT_VIDEO_FAIL', payload: error })
       });
     }
 };

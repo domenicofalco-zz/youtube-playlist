@@ -4,6 +4,7 @@ const baseURL = 'http://localhost:8888/';
 const playlistAPI = baseURL + 'api/playlists';
 const insertURI = baseURL + 'insert/';
 const removeURI = baseURL + 'delete/';
+const editURI = baseURL + 'update/';
 const db = 'mongodb://localhost/youtubeplaylist';
 
 module.exports = {
@@ -13,5 +14,6 @@ module.exports = {
   playlistAPI,
   insertURI,
   removeURI,
+  editURI,
   db
 };
