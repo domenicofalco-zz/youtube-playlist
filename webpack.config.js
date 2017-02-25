@@ -27,6 +27,14 @@ const config = {
             plugins: ['transform-decorators-legacy']
           }
         }]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader?modules',
+          'postcss-loader',
+        ]
       }
     ]
   },

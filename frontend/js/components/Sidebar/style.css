@@ -1,0 +1,6 @@
+/* post css guide https://webdesign.tutsplus.com/series/postcss-deep-dive--cms-889 */
+$colorback: #ff0000;
+
+.sidebar {
+  background: #ff0000;
+}
