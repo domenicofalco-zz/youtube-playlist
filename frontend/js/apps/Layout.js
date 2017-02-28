@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
@@ -9,18 +9,16 @@ class Layout extends React.Component {
     return (
       <div>
 
-        <Header />
-        <Sidebar />
+        {/*<Header />
+        <Sidebar />*
+        <Footer />*/}
 
-        <div>
-          <Grid>
-            <Row className='show-grid'>
-              {React.cloneElement(this.props.children, this.props)}
-            </Row>
-          </Grid>
-        </div>
+        <Col xs={12} md={3}>Sidebar</Col>
 
-        <Footer />
+        <Col xs={12} md={9}>
+          {React.cloneElement(this.props.children, this.props)}
+        </Col>
+
       </div>
     );
   };

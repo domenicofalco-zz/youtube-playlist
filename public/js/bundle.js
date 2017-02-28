@@ -5153,7 +5153,7 @@ Button.defaultProps = defaultProps;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__BreadcrumbItem__ = __webpack_require__(178);
 /* unused harmony reexport BreadcrumbItem */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Button__ = __webpack_require__(62);
-/* unused harmony reexport Button */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_5__Button__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ButtonGroup__ = __webpack_require__(179);
 /* unused harmony reexport ButtonGroup */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ButtonToolbar__ = __webpack_require__(376);
@@ -5169,7 +5169,7 @@ Button.defaultProps = defaultProps;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ControlLabel__ = __webpack_require__(382);
 /* unused harmony reexport ControlLabel */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Col__ = __webpack_require__(381);
-/* unused harmony reexport Col */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_13__Col__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Collapse__ = __webpack_require__(113);
 /* unused harmony reexport Collapse */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Dropdown__ = __webpack_require__(74);
@@ -5181,13 +5181,13 @@ Button.defaultProps = defaultProps;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__Form__ = __webpack_require__(385);
 /* unused harmony reexport Form */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__FormControl__ = __webpack_require__(386);
-/* unused harmony reexport FormControl */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_19__FormControl__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__FormGroup__ = __webpack_require__(389);
 /* unused harmony reexport FormGroup */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__Glyphicon__ = __webpack_require__(114);
 /* unused harmony reexport Glyphicon */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__Grid__ = __webpack_require__(182);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_22__Grid__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_22__Grid__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__HelpBlock__ = __webpack_require__(390);
 /* unused harmony reexport HelpBlock */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__Image__ = __webpack_require__(391);
@@ -5251,7 +5251,7 @@ Button.defaultProps = defaultProps;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__ResponsiveEmbed__ = __webpack_require__(422);
 /* unused harmony reexport ResponsiveEmbed */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__Row__ = __webpack_require__(423);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_54__Row__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_54__Row__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__SafeAnchor__ = __webpack_require__(28);
 /* unused harmony reexport SafeAnchor */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__SplitButton__ = __webpack_require__(424);
@@ -12358,10 +12358,10 @@ module.exports = getIteratorFn;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(567);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__compose__ = __webpack_require__(247);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warning__ = __webpack_require__(249);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__createStore__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_1__combineReducers__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__createStore__["b"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_1__combineReducers__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__["a"]; });
 /* unused harmony reexport compose */
 
 
@@ -20781,8 +20781,8 @@ function compose() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(573);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_symbol_observable__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ActionTypes; });
-/* harmony export (immutable) */ __webpack_exports__["a"] = createStore;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActionTypes; });
+/* harmony export (immutable) */ __webpack_exports__["b"] = createStore;
 
 
 
@@ -21094,8 +21094,17 @@ module.exports = g;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(256);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_redux__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__action_actionCreators__ = __webpack_require__(581);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_axios__ = __webpack_require__(257);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_bootstrap__ = __webpack_require__(63);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _dec, _class;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -21103,36 +21112,182 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-// see https://www.youtube.com/watch?v=Td-2D-_7Y2E
-// SEE ALSO https://www.youtube.com/watch?v=GsyfB4URaYQ
 
 
 
 
-var Home = function (_React$Component) {
+
+
+
+var Home = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(
+
+//pass store-state as props
+function (store) {
+  return {
+    videoList: store.videoList
+  };
+},
+
+//pass actionCreators as props
+function (dispatch) {
+  return {
+    fetchData: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_redux__["a" /* bindActionCreators */])(__WEBPACK_IMPORTED_MODULE_3__action_actionCreators__["a" /* fetchData */], dispatch),
+    saveData: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_redux__["a" /* bindActionCreators */])(__WEBPACK_IMPORTED_MODULE_3__action_actionCreators__["b" /* saveData */], dispatch)
+  };
+}), _dec(_class = function (_React$Component) {
   _inherits(Home, _React$Component);
 
   function Home() {
     _classCallCheck(this, Home);
 
-    return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this));
+    var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this));
+
+    _this.state = {
+      isVisible: false,
+      playlistName: '',
+      videoUrl: ''
+    };
+    return _this;
   }
 
   _createClass(Home, [{
+    key: 'openForm',
+    value: function openForm(e) {
+      e.preventDefault();
+
+      this.setState({
+        isVisible: !this.state.isVisible,
+        playlistName: '',
+        videoUrl: ''
+      });
+    }
+  }, {
+    key: 'onSubmit',
+    value: function onSubmit(e) {
+      e.preventDefault();
+
+      var _state = this.state,
+          playlistName = _state.playlistName,
+          videoUrl = _state.videoUrl;
+
+
+      var newVideo = {
+        playlistName: playlistName,
+        videoUrl: videoUrl
+      };
+
+      this.props.saveData(newVideo);
+
+      this.setState({
+        isVisible: false,
+        playlistName: '',
+        videoUrl: ''
+      });
+    }
+  }, {
+    key: 'onChange',
+    value: function onChange(e) {
+      this.setState(_defineProperty({}, e.target.name, e.target.value));
+    }
+  }, {
+    key: 'validateYouTubeUrl',
+    value: function validateYouTubeUrl() {
+      var videoUrl = this.state.videoUrl;
+
+      var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=|\?v=)([^#\&\?]*).*/;
+      var match = videoUrl.match(regExp);
+
+      return match && match[2].length == 11;
+    }
+  }, {
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      this.props.fetchData();
+    }
+  }, {
+    key: 'displayVideo',
+    value: function displayVideo() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'ul',
+        null,
+        this.props.videoList.map(function (video, i) {
+          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'li',
+            { key: video._id },
+            'Playlist: ',
+            video.playlistName,
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+            'Playlist: ',
+            video.videoUrl
+          );
+        })
+      );
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
+      var form = void 0;
+
+      if (this.state.isVisible) {
+        form = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'form',
+          { onSubmit: function onSubmit(e) {
+              return _this2.onSubmit(e);
+            } },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5_react_bootstrap__["a" /* FormControl */], {
+            value: this.state.videoUrl,
+            type: 'text',
+            name: 'videoUrl',
+            onChange: function onChange(e) {
+              return _this2.onChange(e);
+            },
+            placeholder: 'Youtube url'
+          }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5_react_bootstrap__["a" /* FormControl */], {
+            value: this.state.playlistName,
+            type: 'select',
+            name: 'playlistName',
+            onChange: function onChange(e) {
+              return _this2.onChange(e);
+            },
+            placeholder: 'Playlist Name'
+          }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_5_react_bootstrap__["b" /* Button */],
+            { onClick: function onClick(e) {
+                return _this2.openForm(e);
+              }, bsStyle: 'link' },
+            'Cancel'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_5_react_bootstrap__["b" /* Button */],
+            { type: 'submit', bsStyle: 'primary' },
+            'Save'
+          )
+        );
+      } else {
+        form = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_5_react_bootstrap__["b" /* Button */],
+          { onClick: function onClick(e) {
+              return _this2.openForm(e);
+            }, bsStyle: 'primary' },
+          'Add Video'
+        );
+      }
 
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         null,
-        'ciao'
+        this.props.videoList && this.displayVideo(),
+        form
       );
     }
   }]);
 
   return Home;
-}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
-
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component)) || _class);
 ;
 
 /* harmony default export */ __webpack_exports__["a"] = Home;
@@ -21177,22 +21332,16 @@ var Layout = function (_React$Component) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Header__["a" /* default */], null),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Sidebar__["a" /* default */], null),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          null,
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["a" /* Grid */],
-            null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["b" /* Row */],
-              { className: 'show-grid' },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.cloneElement(this.props.children, this.props)
-            )
-          )
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
+          { xs: 12, md: 3 },
+          'Sidebar'
         ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Footer__["a" /* default */], null)
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
+          { xs: 12, md: 9 },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.cloneElement(this.props.children, this.props)
+        )
       );
     }
   }]);
@@ -21317,7 +21466,7 @@ var Test = function (_React$Component) {
 
 
 
-var store = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["a" /* createStore */])(__WEBPACK_IMPORTED_MODULE_5__reducers__["a" /* default */], __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["b" /* applyMiddleware */])(__WEBPACK_IMPORTED_MODULE_3_redux_thunk___default.a));
+var store = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["b" /* createStore */])(__WEBPACK_IMPORTED_MODULE_5__reducers__["a" /* default */], __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["c" /* applyMiddleware */])(__WEBPACK_IMPORTED_MODULE_3_redux_thunk___default.a));
 
 var history = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_router_redux__["syncHistoryWithStore"])(__WEBPACK_IMPORTED_MODULE_2_react_router__["d" /* browserHistory */], store);
 
@@ -21333,7 +21482,7 @@ var history = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_router_red
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(530);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
 /* unused harmony reexport connectAdvanced */
-/* unused harmony reexport connect */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_2__connect_connect__["a"]; });
 
 
 
@@ -22216,10 +22365,10 @@ var Footer = function (_React$Component) {
         'footer',
         { className: 'footer' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["a" /* Grid */],
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["d" /* Grid */],
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["b" /* Row */],
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["e" /* Row */],
             { className: 'show-grid' },
             'Footer'
           )
@@ -22233,7 +22382,7 @@ var Footer = function (_React$Component) {
 
 ;
 
-/* harmony default export */ __webpack_exports__["a"] = Footer;
+/* unused harmony default export */ var _unused_webpack_default_export = Footer;
 
 /***/ }),
 /* 276 */
@@ -22270,10 +22419,10 @@ var Header = function (_React$Component) {
         'header',
         { className: 'header' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["a" /* Grid */],
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["d" /* Grid */],
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["b" /* Row */],
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["e" /* Row */],
             { className: 'show-grid' },
             'header'
           )
@@ -22287,7 +22436,7 @@ var Header = function (_React$Component) {
 
 ;
 
-/* harmony default export */ __webpack_exports__["a"] = Header;
+/* unused harmony default export */ var _unused_webpack_default_export = Header;
 
 /***/ }),
 /* 277 */
@@ -22336,7 +22485,7 @@ var Footer = function (_React$Component) {
 
 ;
 
-/* harmony default export */ __webpack_exports__["a"] = Footer;
+/* unused harmony default export */ var _unused_webpack_default_export = Footer;
 
 /***/ }),
 /* 278 */
@@ -22351,7 +22500,7 @@ var Footer = function (_React$Component) {
 
 
 
-var rootReducer = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["c" /* combineReducers */])({
+var rootReducer = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["d" /* combineReducers */])({
   videoList: __WEBPACK_IMPORTED_MODULE_2__reducer_video_list__["a" /* default */],
   routing: __WEBPACK_IMPORTED_MODULE_1_react_router_redux__["routerReducer"]
 });
@@ -27028,7 +27177,7 @@ var Col = function (_React$Component) {
 Col.propTypes = propTypes;
 Col.defaultProps = defaultProps;
 
-/* unused harmony default export */ var _unused_webpack_default_export = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_8__utils_bootstrapUtils__["c" /* bsClass */])('col', Col);
+/* harmony default export */ __webpack_exports__["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_8__utils_bootstrapUtils__["c" /* bsClass */])('col', Col);
 
 /***/ }),
 /* 382 */
@@ -27611,7 +27760,7 @@ FormControl.contextTypes = contextTypes;
 FormControl.Feedback = __WEBPACK_IMPORTED_MODULE_9__FormControlFeedback__["a" /* default */];
 FormControl.Static = __WEBPACK_IMPORTED_MODULE_10__FormControlStatic__["a" /* default */];
 
-/* unused harmony default export */ var _unused_webpack_default_export = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_11__utils_bootstrapUtils__["c" /* bsClass */])('form-control', FormControl);
+/* harmony default export */ __webpack_exports__["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_11__utils_bootstrapUtils__["c" /* bsClass */])('form-control', FormControl);
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
@@ -44557,7 +44706,7 @@ function createConnect() {
   };
 }
 
-/* unused harmony default export */ var _unused_webpack_default_export = createConnect();
+/* harmony default export */ __webpack_exports__["a"] = createConnect();
 
 /***/ }),
 /* 531 */
@@ -44584,7 +44733,7 @@ function whenMapDispatchToPropsIsMissing(mapDispatchToProps) {
 
 function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
   return mapDispatchToProps && typeof mapDispatchToProps === 'object' ? __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__["b" /* wrapMapToPropsConstant */])(function (dispatch) {
-    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["d" /* bindActionCreators */])(mapDispatchToProps, dispatch);
+    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["a" /* bindActionCreators */])(mapDispatchToProps, dispatch);
   }) : undefined;
 }
 
@@ -48604,7 +48753,7 @@ function getUndefinedStateErrorMessage(key, action) {
 
 function getUnexpectedStateShapeWarningMessage(inputState, reducers, action, unexpectedKeyCache) {
   var reducerKeys = Object.keys(reducers);
-  var argumentName = action && action.type === __WEBPACK_IMPORTED_MODULE_0__createStore__["b" /* ActionTypes */].INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';
+  var argumentName = action && action.type === __WEBPACK_IMPORTED_MODULE_0__createStore__["a" /* ActionTypes */].INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';
 
   if (reducerKeys.length === 0) {
     return 'Store does not have a valid reducer. Make sure the argument passed ' + 'to combineReducers is an object whose values are reducers.';
@@ -48630,7 +48779,7 @@ function getUnexpectedStateShapeWarningMessage(inputState, reducers, action, une
 function assertReducerSanity(reducers) {
   Object.keys(reducers).forEach(function (key) {
     var reducer = reducers[key];
-    var initialState = reducer(undefined, { type: __WEBPACK_IMPORTED_MODULE_0__createStore__["b" /* ActionTypes */].INIT });
+    var initialState = reducer(undefined, { type: __WEBPACK_IMPORTED_MODULE_0__createStore__["a" /* ActionTypes */].INIT });
 
     if (typeof initialState === 'undefined') {
       throw new Error('Reducer "' + key + '" returned undefined during initialization. ' + 'If the state passed to the reducer is undefined, you must ' + 'explicitly return the initial state. The initial state may ' + 'not be undefined.');
@@ -48638,7 +48787,7 @@ function assertReducerSanity(reducers) {
 
     var type = '@@redux/PROBE_UNKNOWN_ACTION_' + Math.random().toString(36).substring(7).split('').join('.');
     if (typeof reducer(undefined, { type: type }) === 'undefined') {
-      throw new Error('Reducer "' + key + '" returned undefined when probed with a random type. ' + ('Don\'t try to handle ' + __WEBPACK_IMPORTED_MODULE_0__createStore__["b" /* ActionTypes */].INIT + ' or other actions in "redux/*" ') + 'namespace. They are considered private. Instead, you must return the ' + 'current state for any unknown actions, unless it is undefined, ' + 'in which case you must return the initial state, regardless of the ' + 'action type. The initial state may not be undefined.');
+      throw new Error('Reducer "' + key + '" returned undefined when probed with a random type. ' + ('Don\'t try to handle ' + __WEBPACK_IMPORTED_MODULE_0__createStore__["a" /* ActionTypes */].INIT + ' or other actions in "redux/*" ') + 'namespace. They are considered private. Instead, you must return the ' + 'current state for any unknown actions, unless it is undefined, ' + 'in which case you must return the initial state, regardless of the ' + 'action type. The initial state may not be undefined.');
     }
   });
 }
@@ -49482,6 +49631,91 @@ var App = function (_React$Component) {
 ;
 
 __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(App, null), document.getElementById('app'));
+
+/***/ }),
+/* 580 */
+/***/ (function(module, exports) {
+
+const port = 8888;
+const publicPath = 'public/';
+const baseURL = 'http://localhost:8888/';
+const playlistAPI = baseURL + 'api/playlists';
+const insertURI = baseURL + 'insert/';
+const removeURI = baseURL + 'delete/';
+const editURI = baseURL + 'update/';
+const db = 'mongodb://localhost/youtubeplaylist';
+
+module.exports = {
+  port,
+  publicPath,
+  baseURL,
+  playlistAPI,
+  insertURI,
+  removeURI,
+  editURI,
+  db
+};
+
+
+/***/ }),
+/* 581 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(257);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_config__ = __webpack_require__(580);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_config___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__app_config__);
+/* harmony export (immutable) */ __webpack_exports__["a"] = fetchData;
+/* harmony export (immutable) */ __webpack_exports__["b"] = saveData;
+/* unused harmony export removeData */
+/* unused harmony export editData */
+
+
+
+function fetchData() {
+  return function (dispatch) {
+    dispatch({ type: 'FETCH_DATA' });
+    __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(__WEBPACK_IMPORTED_MODULE_1__app_config___default.a.playlistAPI).then(function (response) {
+      dispatch({ type: 'FETCH_DATA_SUCCESS', payload: response.data });
+    }).catch(function (error) {
+      dispatch({ type: 'FETCH_DATA_FAIL', payload: error });
+    });
+  };
+};
+
+function saveData(video) {
+  return function (dispatch) {
+    dispatch({ type: 'SAVE_DATA' });
+    __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(__WEBPACK_IMPORTED_MODULE_1__app_config___default.a.insertURI, video).then(function (response) {
+      dispatch({ type: 'SAVE_DATA_SUCCESS', payload: response.data });
+    }).catch(function (error) {
+      dispatch({ type: 'SAVE_DATA_FAIL', payload: error });
+    });
+  };
+};
+
+function removeData(videoId) {
+  return function (dispatch) {
+    dispatch({ type: 'REMOVE_VIDEO' });
+    __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(__WEBPACK_IMPORTED_MODULE_1__app_config___default.a.removeURI + videoId).then(function (response) {
+      dispatch({ type: 'REMOVE_VIDEO_SUCCESS', payload: response.data });
+    }).catch(function (error) {
+      dispatch({ type: 'REMOVE_VIDEO_FAIL', payload: error });
+    });
+  };
+};
+
+function editData(id, video) {
+  return function (dispatch) {
+    dispatch({ type: 'EDIT_VIDEO' });
+    __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(__WEBPACK_IMPORTED_MODULE_1__app_config___default.a.editURI + id, video).then(function (response) {
+      dispatch({ type: 'EDIT_VIDEO_SUCCESS', payload: response.data });
+    }).catch(function (error) {
+      dispatch({ type: 'EDIT_VIDEO_FAIL', payload: error });
+    });
+  };
+};
 
 /***/ })
 /******/ ]);

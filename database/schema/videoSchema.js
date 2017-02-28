@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
 
 const schema = mongoose.Schema({
-  title: String,
-  url: String,
-  image: String
+  playlistName: String,
+  videoUrl: String
 });
 
 // "playlists" is the collection name in the DB

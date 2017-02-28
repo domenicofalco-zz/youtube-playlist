@@ -22,9 +22,8 @@ router.get('*', (req, res) => {
 // save new data into DB
 router.post('/insert', (req, res) => {
   const video = {
-    title: req.body.title,
-    url: req.body.url,
-    image: req.body.image
+    playlistName: req.body.playlistName,
+    videoUrl: req.body.videoUrl
   };
 
   const data = new VideoData(video);
@@ -33,7 +32,7 @@ router.post('/insert', (req, res) => {
   res.send(data).end();
 });
 
-router.post('/delete/:id', (req, res) => {
+/*router.post('/delete/:id', (req, res) => {
   const id = req.params.id;
   VideoData.findByIdAndRemove(id).exec();
   res.send(id).end();
@@ -45,13 +44,12 @@ router.post('/update/:id', (req, res) => {
   const video = {
     editable: req.body.editable,
     url: req.body.url,
-    image: req.body.image
   };
 
   console.log(req.body.editable);
 
   VideoData.findByIdAndUpdate(id, video, {new: true}).exec();
   res.send(id).end();
-});
+});*/
 
 module.exports = router;
